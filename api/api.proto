@@ -1,0 +1,61 @@
+syntax = "proto3";
+package api;
+
+import "google/api/annotations.proto";
+
+message CreateDeploymentRequest {
+  string name = 1;
+}
+
+message CreateDeploymentResponse {}
+
+message StageDeploymentRequest {
+  string image = 1;
+}
+
+message StageDeploymentResponse {}
+
+message StatusDeploymentRequest {
+  string name = 1;
+}
+
+message StatusDeploymentResponse {
+  bool created = 1;
+  bool staged = 2;
+  bool running = 3;
+  bool healthy = 4;
+}
+
+message RemoveDeploymentRequest {
+  string name = 1;
+}
+
+message RemoveDeploymentResponse {}
+
+
+service Deployment {
+  rpc Create(CreateDeploymentRequest) returns (CreateDeploymentResponse) {
+    option (google.api.http) = {
+      post: "/v1/deployment/create"
+      body: "*"
+    };
+  }
+  rpc Stage(StageDeploymentRequest) returns (StageDeploymentResponse) {
+    option (google.api.http) = {
+      post: "/v1/deployment/stage"
+      body: "*"
+    };
+  }
+  rpc Status(StatusDeploymentRequest) returns (StatusDeploymentResponse) {
+    option (google.api.http) = {
+      post: "/v1/deployment/status"
+      body: "*"
+    };
+  }
+  rpc Remove(RemoveDeploymentRequest) returns (RemoveDeploymentResponse) {
+    option (google.api.http) = {
+      post: "/v1/deployment/remove"
+      body: "*"
+    };
+  }
+}
