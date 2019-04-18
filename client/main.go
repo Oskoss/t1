@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/pantomath-io/demo-grpc/api"
+	"github.com/oskoss/t1/api"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )

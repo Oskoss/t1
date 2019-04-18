@@ -3,9 +3,9 @@ package api
 import (
 	"log"
 
-	"github.com/pantomath-io/demo-grpc/datastore"
+	"github.com/oskoss/t1/datastore"
 
-	"github.com/pantomath-io/demo-grpc/controllers"
+	"github.com/oskoss/t1/controllers"
 	"golang.org/x/net/context"
 )
 

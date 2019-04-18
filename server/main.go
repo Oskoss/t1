@@ -8,7 +8,7 @@ import (
 	"net/http"
 
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
-	"github.com/pantomath-io/demo-grpc/api"
+	"github.com/oskoss/t1/api"
 	"google.golang.org/grpc"
 )
 

@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	rClient "github.com/go-redis/redis"
-	"github.com/pantomath-io/demo-grpc/controllers"
+	"github.com/oskoss/t1/controllers"
 )
 
 type DataProvider interface {
